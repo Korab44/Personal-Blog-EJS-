@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<h1>Homee</h1>
+<p><%= firstParagrhHome %></p>
+<% arrayPosts.forEach(function(object) { %>
+   <h1> <%= object.inputTitle %> </h1>
+   <p> <%= object.inputPost.substring(0, 100) + " ..."%></p>
+   <a href = <%= "/posts/" + object.inputTitle.replace(/ /g,'-').toLowerCase()%> >Read More</a>
+<% }); %>
+
+
+<%- include('partials/footer') %>
